@@ -1,0 +1,29 @@
+// Modules
+@import "modules/colors";
+
+// Base Font
+//$base-font-family: Georgia, Times, "Times New Roman", serif;
+$base-font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+$base-font-size: 100%;
+$base-font-weight: normal;
+$base-line-height: 1.5;
+$color-main: $color-grey80;
+$color-darker: $color-grey80;
+$color-lighter: $color-grey60;
+$base-font-color: $color-main;
+$color-accent: #000;
+$color-kccblue: #2754a5;
+$color-links: #069;
+$color-linksdark: #034160;
+
+// Partials
+@import "partials/reset";
+@import "partials/html5";
+@import "partials/media";
+@import "partials/clearfix";
+@import "partials/buttons";
+@import "partials/typography-simple";
+
+// Layout
+@import "partials/layout/grid-simple";
+@import "partials/layout/grid-image";
