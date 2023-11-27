@@ -19,21 +19,32 @@
 
 <body>
 
-    <header id="home" class="site-header fadeanddropIn">
+    <header id="home" class="nma-site-header fadeanddropIn">
         <div class="container full-width group">
             <div class="site-branding">
-                <h1 class="logo-wrapper"><a href="#" class="kccblue"><span class="span kcc-logo">KapCC</span></a> <a href="/"><span class="nma-logo">New Media Arts</span></a></h1>
+                <h1 class="logo-wrapper"><a href="http://kapiolani.hawaii.edu" class="kccblue"><span class="span kcc-logo">KapCC</span></a> <a href="/"><span class="nma-logo">New Media Arts</span></a></h1>
             </div>
-            <nav class="site-navigation" role="navigation">
-                <div class="menu border-menu"><span>Menu</span></div>
-                <ul class="nav group">
-                    <li><a href="#about" class="scroll">About</a></li>
-                    <li><a href="#degree" class="scroll">Degree Info</a></li>
-                    <li><a href="#" class="scroll">Gallery</a></li>
-                    <li><a href="#" class="scroll">Apply</a></li>
-                    <li><a href="#" class="scroll">News</a></li>
-                    <li><a href="#" class="scroll">Contact</a></li>
-                </ul>
+            <nav class="nma-site-nav" data-navstate="closed">
+                <button class="nma-menu-button">
+                    <span class="hide-visually">Menu</span>
+                        <svg width="80" height="24">
+                        <title>Menu</title>
+                        <rect class="navicon-top-one" x="25" y="0" height="4" width="15"></rect>
+                        <rect class="navicon-top-two" x="40" y="0" height="4" width="15"></rect>      
+                        <rect class="navicon-middle-one" x="25" y="10" height="4" width="15"></rect>
+                        <rect class="navicon-middle-two" x="40" y="10" height="4" width="15"></rect>     
+                        <rect class="navicon-bottom-one" x="25" y="20" height="4" width="15"></rect>
+                        <rect class="navicon-bottom-two" x="40" y="20" height="4" width="15"></rect>
+                        </svg>
+                    </button>
+                    <ul>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Degree Info</li></a>
+                    <a href="#"><li>Gallery</li></a>
+                    <a href="#"><li>Apply</li></a>
+                    <a href="#"><li>News</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    </ul>
             </nav>
         </div>
     </header>
@@ -357,6 +368,9 @@
     <!-- SWIPER -->
     <link rel="stylesheet" href="swiper/swiper.min-dist.css">
 
+    <!-- MARI'S OVERLAY NAV -->
+    <script src="js/mari-overlaynav.js"></script>
+
 
     <!-- BASELINE.JS by Daniel Eden https://github.com/daneden/Baseline.js-->
     <!--<script src="js/baselinejs.js"></script>-->
@@ -400,42 +414,6 @@
                 // And if we need scrollbar
                 //scrollbar: '.swiper-scrollbar',
             });
-
-
-
-            //ACCORDIAN
-            var acc = document.getElementsByClassName("accordian");
-            var i;
-            for (i = 0; i < acc.length; i++) {
-                acc[i].children[0].onclick = function () {
-                    this.parentElement.classList.toggle("open");
-                }
-            };
-
-            // reveal point from bottom and top of the window
-            var revealerpoint = 50;
-            window.addEventListener('scroll', reveal);
-            reveal();
-
-            function reveal() {
-                //console.log("scrolling");
-                var revealers = document.querySelectorAll('.revealer');
-                for (var i = 0; i < revealers.length; i++) {
-                    var windowheight = window.innerHeight;
-                    var revealertop = revealers[i].getBoundingClientRect().top;
-                    var revealerbottom = revealers[i].getBoundingClientRect().bottom;
-                    //console.log("revealertop: " + revealertop);
-                    //console.log("revealerbottom: " + revealerbottom);
-                    if (revealertop < windowheight - revealerpoint) {
-                        revealers[i].classList.add('active')
-                    } else {
-                        revealers[i].classList.remove('active');
-                    };
-                    if (revealerbottom < 0 + revealerpoint) {
-                        revealers[i].classList.remove('active');
-                    }
-                }
-            };
 
 
         })
