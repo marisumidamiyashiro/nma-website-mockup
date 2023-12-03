@@ -1,0 +1,101 @@
+	.kccnma-mockup-header {
+	display: flex;
+	align-items: center;
+
+	h1 {
+		font-family: $font-title;
+		color: #333;
+        font-weight: normal;
+        font-style: normal;
+		font-size: 1.5em;
+		line-height: 1em;
+	}
+	}
+
+	/* HEADER */
+	.site-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	border-bottom: 1px solid gray;
+	}
+
+	/* SITE-NAV */
+	.site-nav {
+	display: flex;
+
+	.menu-button {
+		position: relative;
+		z-index: 20;
+		cursor: pointer;
+		fill: $color-link-darker;
+		border: none;
+		background-color: transparent;
+		z-index: 2;
+	}
+
+	&[data-navstate="closed"] {
+        position: relative;
+        
+        .navicon-top-one {
+            animation: separated-top-one-close .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+        .navicon-top-two {
+            animation: separated-top-two-close .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+        .navicon-middle-one {
+            animation: separated-middle-one-close .5s forwards;
+        }
+        .navicon-middle-two {
+            animation: separated-middle-two-close .5s forwards;
+        }
+        .navicon-bottom-one {
+            animation: separated-bottom-one-close .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+        .navicon-bottom-two {
+            animation: separated-bottom-two-close .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+        
+    }
+    
+    &[data-navstate="open"] {
+        .menu-button {
+        position: relative;
+        z-index: 25;
+        fill: #fff;
+        stroke: #fff;
+        
+        .navicon-top-one {
+            animation: separated-top-one-open .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+        .navicon-top-two {
+            animation: separated-top-two-open .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+        .navicon-middle-one {
+            animation: separated-middle-one-open .3s forwards;
+        }
+        .navicon-middle-two {
+            animation: separated-middle-two-open .3s forwards;
+        }
+        .navicon-bottom-one {
+            animation: separated-bottom-one-open .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+        .navicon-bottom-two {
+            animation: separated-bottom-two-open .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+        }
+        ul {
+        background-color: #069;
+        transform: translate(0,0);
+        }
+    }
+}
+

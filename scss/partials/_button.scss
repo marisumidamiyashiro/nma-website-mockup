@@ -1,0 +1,23 @@
+.button {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    color: #fff;
+    margin-left: auto;
+    max-width: 85%;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: .8em;
+    line-height: 1.3em;
+    text-align: center;
+
+    display: inline-block;
+    border-radius: 0.32em;
+    text-decoration: none;
+    font-family: $font-title;
+
+    &:hover {
+        background-color: #fff;
+        color: $color-link-darker;
+    }
+}

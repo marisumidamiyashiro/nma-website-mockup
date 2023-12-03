@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+// VARIABLES
+
+$color-text-body: rgba(0,0,0,.8);
+$color-link: rgba(0,102,153,.8);
+$color-link-darker: rgba(0,102,153,1);
+$color-accent: rgba(255,153,0,1);
+
+$font-title: "acumin-pro", helvetica, arial, sans-serif;
+$font-body: "acumin-pro-condensed", helvetica, arial, sans-serif;
+
+// PARTIALS
+
+@import "partials/header";
+@import "partials/keyframes";
+@import "partials/hero";
+@import "partials/media";
+@import "partials/logos";
+@import "partials/overlaynav";
+@import "partials/button";
